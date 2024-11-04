@@ -14,14 +14,15 @@
   --text-light: #FFFFFF;
   --border: #F9C06A;
 }
-
+html {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: auto;
+}
 body {
   color: var(--text-primary);
   background-color: var(--bg-body);
-  font-family: "Playfair Display", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: auto;
 }
 
 a {
@@ -36,47 +37,111 @@ h2 {
   line-height: auto;
 }
 
-.btn {
-  color: var(--text-dark);
-  background: var(--secondary);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 14px 26px;
-  border: none;
-  border-radius: 24px;
-}
-
 .container {
   padding: 0 18px;
 }
 
 .header {
   background-image: url(./assets/coffee_image.png);
-  background-position: top/left;
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.btn {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  background: var(--secondary);
+  padding: 0.7rem 1.3rem;
+  border: none;
+  border-radius: 1.2rem;
 }
 
 .topbar {
+  font-size: 0.7rem;
+  font-weight: 500;
   color: var(--text-light);
-  padding-top: 10px;
+  padding: 10px 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-
-.nav-menu {
+.topbar .hidden {
   display: none;
 }
 
-
-@media screen and (min-width: 1024px) {
-  .container {
-    padding: 0 50px;
-  }
-
-  .nav-menu {
-    display: block;
-  }
+.navbar {
+  display: flex;
+  flex-direction: column;
 }
+
+.navbar > a {
+  margin: 5px 0;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sign > a {
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  background-color: var(--secondary);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  padding: 2px;
+  height: 30px;
+  top: 10px;
+  right: 18px;
+  border: none;
+  border-radius: 2px;
+}
+
+.navbar-toggler > span {
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-dark);
+  border-radius: 2px;
+}
+
+
+/*LARGE SCREEN */
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
+  .topbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .topbar .hidden {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navbar > a {
+    margin: 0 30px
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+  
+}
+

@@ -12,10 +12,10 @@
   --text-primary: #707070;
   --text-dark: #1E1E1E;
   --text-light: #FFFFFF;
-  --border: #F9C06A;
+  --border: rgba(249, 192, 106, 0.47);
 }
 html {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: auto;
@@ -38,14 +38,17 @@ h2 {
 }
 
 .container {
-  padding: 0 18px;
+  padding: 0 22px;
 }
 
 .header {
   background-image: url(./assets/coffee_image.png);
+  background-position: top right;
+  background-size: cover;
 }
 
 .btn {
+  display: inline-block;
   font-size: 0.7rem;
   font-weight: bold;
   color: var(--text-dark);
@@ -115,16 +118,111 @@ h2 {
 }
 
 
+#hero {
+  text-align: center;
+  color: var(--text-light);
+  padding: 50px 0;
+}
+
+#hero .title {
+  font-size: 1.1rem;
+}
+
+#hero .title > span {
+  display: block;
+  font-size: 7rem;
+}
+
+#hero .btn {
+  margin-top: 20px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-description {
+  text-align: center;
+  line-height: 1.5rem;
+  margin-top: 6px;
+}
+
+.card-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+}
+
+.card-menu {
+  position: relative;
+  text-align: center;
+}
+
+.card-menu .card-img {
+  display: block;
+  width: 100%;
+}
+
+.card-menu .card-body {
+  padding: 14px;
+}
+
+.card-menu .card-title {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-menu .ingredient {
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.card-menu .price {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.card-menu .btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
 /*LARGE SCREEN */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   html {
     font-size: 20px;
+  }
+
+  .container {
+    padding: 0 93px;
   }
 
   .topbar {
     flex-direction: row;
     align-items: center;
+    padding: 21px 0;
   }
 
   .topbar .hidden {
@@ -141,6 +239,56 @@ h2 {
 
   .navbar-toggler {
     display: none;
+  }
+
+  #hero {
+    width: 50%;
+    text-align: left;
+    padding-top: 116px;
+    padding-bottom: 95px;
+  }
+
+  #hero .title {
+    font-size: 1.1rem;
+  }
+  
+  #hero .title > span {
+    display: block;
+    font-size: 11rem;
+  }
+  
+  #hero .btn {
+    margin-top: 20px;
+  }
+
+  .section {
+    margin-top: 82px;
+  }
+  
+  .section-title {
+    font-size: 2.7rem;
+  }
+  
+  .section-description {
+    line-height: 1.7rem;
+    margin-top: 10px;
+  }
+  
+  .card-group {
+    margin-top: 32px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  
+  .card-menu .card-title {
+    font-size: 1.1rem;
+  }
+
+  
+  .card-menu .btn {
+    padding: 14px 10px;
   }
   
 }

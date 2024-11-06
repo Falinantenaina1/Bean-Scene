@@ -165,15 +165,20 @@ h2 {
 .card {
   background: var(--bg-primary);
   border: 1px solid var(--border);
+  text-align: center;
+  width: 100%;
 }
 
 .card-menu {
   position: relative;
-  text-align: center;
+}
+
+.card-img {
+  display: block;
+  margin: 0 auto;
 }
 
 .card-menu .card-img {
-  display: block;
   width: 100%;
 }
 
@@ -181,7 +186,7 @@ h2 {
   padding: 14px;
 }
 
-.card-menu .card-title {
+.card-title {
   color: var(--primary);
   font-size: 1.2rem;
   font-weight: 700;
@@ -208,9 +213,36 @@ h2 {
   transform: translate(-50%, 50%);
 }
 
+.card-differencies {
+  padding: 12px;
+}
+
+.card-differencies .card-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.card-differencies .card-text {
+  max-width: 70%;
+  margin: 12px auto 0;
+}
+
+.get-started {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.get-started > .call {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin: 12px auto; 
+}
+
 /*LARGE SCREEN */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 912px) {
   html {
     font-size: 20px;
   }
@@ -290,6 +322,22 @@ h2 {
   .card-menu .btn {
     padding: 14px 10px;
   }
+
+  .card-differencies {
+    padding: 36px 50px;
+  }
+  
+  .card-differencies .card-img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 25px;
+  }
+  
+  .card-differencies .card-text {
+    max-width: 80%;
+    margin: 8px auto 0;
+  }
+  
   
 }
 

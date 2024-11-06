@@ -1,5 +1,6 @@
 import { menus } from "../constants/constants";
 import Button from "./Button";
+import CardGroup from "./cardGroup";
 
 function Card ({img, title, coffee, milk, price}) {
     return <div className="card card-menu">
@@ -15,7 +16,7 @@ function Card ({img, title, coffee, milk, price}) {
 
 
 function MenuCard () {
-    return <>
+    return <CardGroup>
         {menus.map(menu => {
             return <Card
                 key = {menu.id}
@@ -26,7 +27,7 @@ function MenuCard () {
                 price = {menu.price}
             />
         })}
-    </>
+    </CardGroup>
 }
 
 export default MenuCard;

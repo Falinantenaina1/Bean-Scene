@@ -1,10 +1,10 @@
 import Container from "./Container";
 
-function Section ({id, title, desc, children}) {
+function Section ({id="", title=null, desc=null, children}) {
     return <section id={id} className="section">
         <Container>
-            <h2 className="section-title">{title}</h2>
-            <p className="section-description">{desc}</p>
+            {title && <h2 className="section-title">{title}</h2>}
+            {desc && <p className="section-description">{desc}</p>}
             {children}
         </Container>
     </section>

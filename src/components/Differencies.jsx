@@ -1,6 +1,7 @@
 import Button from "./Button";
 import DifferenciesCard from "./DifferenciesCard";
 import Section from "./Section";
+import blastStart from "../assets/coffee_blast_start.png";
 
 function Differencies() {
 
@@ -11,6 +12,7 @@ function Differencies() {
             <p className="call">Get started today.</p>
             <Button href="#">Join Us</Button>
         </div>
+        <img className="blast blast-start" src={blastStart} alt="coffee_blast" />
     </Section>
 }
 

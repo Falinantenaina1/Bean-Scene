@@ -11,6 +11,42 @@ import badge from "../assets/badge.svg"
 import coffeeCup from "../assets/coffee-cup.svg"
 import bestPrice from "../assets/best-price.svg"
 
+/*Feedback profil */
+
+import profil from "../assets/profil.png"
+
+
+export const feedback = [
+    {
+        id: 1,
+        author: "Jonny Thomas",
+        job: "Project Manager",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
+        profil: profil
+    },
+    {
+        id: 2,
+        author: "Jonny Thomas",
+        job: "Project Manager",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
+        profil: profil
+    },
+    {
+        id: 3,
+        author: "Jonny Thomas",
+        job: "Project Manager",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
+        profil: profil
+    },
+    {
+        id: 4,
+        author: "Jonny Thomas",
+        job: "Project Manager",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
+        profil: profil
+    }
+]
+
 export const navigation = [
     {
         id: 1,

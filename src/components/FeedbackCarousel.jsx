@@ -17,11 +17,9 @@ const FeedbackCarousel = () => {
     <div>
       <Slider {...settings}>
         {feedback.map(item => {
-          return <div className="feedback-carousel" key={item.id}>
-            <FeedbackCard author={item.author} job={item.job} profil={item.profil} >
+          return <FeedbackCard key={item.id} author={item.author} job={item.job} profil={item.profil} >
               {item.text}
             </FeedbackCard>
-          </div>
         })}
       </Slider>
     </div>

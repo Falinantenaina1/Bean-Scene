@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,19 +8,19 @@
 
 :root {
   --primary: #603809;
-  --secondary: #F9C06A;
-  --bg-body: #FFFEFC;
-  --bg-primary: #FFF9F1;
+  --secondary: #f9c06a;
+  --bg-body: #fffefc;
+  --bg-primary: #fff9f1;
   --text-primary: #707070;
-  --text-dark: #1E1E1E;
-  --text-light: #FFFFFF;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
   --border: rgba(249, 192, 106, 0.47);
 }
 html {
   font-family: "Playfair Display", serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: auto;
+  scroll-behavior: smooth;
 }
 body {
   color: var(--text-primary);
@@ -34,7 +36,6 @@ h2 {
   color: var(--primary);
   font-size: 1.2rem;
   font-weight: 700;
-  line-height: auto;
 }
 
 .container {
@@ -66,7 +67,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
   flex-wrap: wrap;
   gap: 4px;
 }
@@ -82,6 +82,11 @@ h2 {
 
 .navbar > a {
   margin: 5px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar > a:hover {
+  border-bottom: 1px solid var(--text-light);
 }
 
 .sign {
@@ -116,7 +121,6 @@ h2 {
   background-color: var(--text-dark);
   border-radius: 2px;
 }
-
 
 #hero {
   text-align: center;
@@ -161,10 +165,12 @@ h2 {
 
 #get-chance {
   background: url(./assets/coffe_with_bean.png);
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#get-chance .section-title, #get-chance p {
+#get-chance .section-title,
+#get-chance p {
   color: var(--text-light);
 }
 
@@ -196,11 +202,13 @@ h2 {
   gap: 30px;
 }
 
+
 .card {
   background: var(--bg-primary);
   border: 1px solid var(--border);
   text-align: center;
   width: 100%;
+  margin: auto;
 }
 
 .card-menu {
@@ -244,7 +252,7 @@ h2 {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%) !important;
 }
 
 .card-differencies {
@@ -258,13 +266,13 @@ h2 {
 }
 
 .card-differencies .card-text {
-  max-width: 70%;
-  margin: 12px auto 0;
+  margin: 20px auto 0;
 }
 
 .card-feedback {
   padding: 50px 30px;
   position: relative;
+  margin: 20px auto;
 }
 
 .card-feedback .apostroph {
@@ -291,7 +299,7 @@ h2 {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 50%)
+  transform: translate(-50%, 50%);
 }
 
 .get-started {
@@ -303,15 +311,30 @@ h2 {
   font-size: 1.5rem;
   color: var(--primary);
   font-weight: 700;
-  margin: 12px auto; 
+  margin: 12px auto;
 }
 
 .blast {
   display: none;
 }
 
-
 /*LARGE SCREEN */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 64px;
+  }
+
+  .section-with-image {
+    padding: 20px 64px;
+    margin: 24px auto 0;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+}
 
 @media screen and (min-width: 912px) {
   html {
@@ -337,7 +360,7 @@ h2 {
   }
 
   .navbar > a {
-    margin: 0 30px
+    margin: 0 30px;
   }
 
   .navbar-toggler {
@@ -354,12 +377,12 @@ h2 {
   #hero .title {
     font-size: 1.1rem;
   }
-  
+
   #hero .title > span {
     display: block;
     font-size: 11rem;
   }
-  
+
   #hero .btn {
     margin-top: 20px;
   }
@@ -369,11 +392,11 @@ h2 {
     padding: 20px 0;
     position: relative;
   }
-  
+
   .section-title {
     font-size: 2.7rem;
   }
-  
+
   .section-description {
     line-height: 1.7rem;
     margin-top: 10px;
@@ -384,27 +407,26 @@ h2 {
   }
 
   .flex-text {
-    max-width: 50%;
+    width: 60%;
   }
 
   .flex .flex-img {
     display: block;
+    width: 50%;
   }
-
 
   .card-group {
-    margin-top: 32px;
+    margin-top: 40px;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 60px;
   }
 
-  
   .card-menu .card-title {
     font-size: 1.1rem;
   }
 
-  
   .card-menu .btn {
     padding: 14px 10px;
   }
@@ -412,21 +434,21 @@ h2 {
   .card-differencies {
     padding: 36px 50px;
   }
-  
+
   .card-differencies .card-img {
     width: 88px;
     height: 88px;
     margin-bottom: 25px;
   }
-  
+
   .card-differencies .card-text {
-    max-width: 80%;
+    width: 80%;
     margin: 8px auto 0;
   }
-  
+
   .card-feedback {
     width: 80%;
-    margin: auto;
+    margin: 20px auto 40px;
     padding: 70px;
   }
 
@@ -435,17 +457,15 @@ h2 {
     left: 20px;
     width: 60px;
   }
-  
+
   .card-feedback .author {
     margin-top: 24px;
   }
-  
-  
+
   .card-feedback .author-profil {
     width: 100px;
     height: 100px;
   }
-  
 
   .blast {
     display: block;
@@ -462,7 +482,28 @@ h2 {
     left: 0;
     top: -250px;
   }
-  
-  
 }
 
+@media screen and (min-width: 1128px) {
+
+  .card-group {
+    margin-top: 40px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .card-differencies {
+    padding: 36px 0px;
+  }
+
+  .flex-text > p {
+    margin: 16px 0;
+  }
+
+  .flex-img {
+    max-height: 525px;
+    height: auto;
+    object-fit: scale-down;
+  }
+
+}

@@ -5,7 +5,7 @@ import blastStart from "../assets/coffee_blast_start.png";
 
 function Differencies() {
 
-    return <Section id="differencies" title="Why are we different?" desc="We don’t just make your coffee, we make your day!">
+    return <Section id="about" title="Why are we different?" desc="We don’t just make your coffee, we make your day!">
         <DifferenciesCard />
         <div className="get-started">
             <p>Great ideas start with great coffee, Lets help you achieve that</p>

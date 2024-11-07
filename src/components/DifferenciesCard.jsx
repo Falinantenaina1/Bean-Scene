@@ -1,23 +1,28 @@
 import { differencies } from "../constants/constants";
-import CardGroup from "./cardGroup";
+import { motion } from "framer-motion";
+import CascadWrapper from "./CascadWrapper";
 
-function Card ({img, title, text}) {
-    return <div className="card card-differencies">
+function Card({ img, title, text }) {
+    return <motion.div
+        whileHover={{ scale: 1.1}}
+        className="card card-differencies"
+    >
         <img src={img} alt={title} className="card-img" />
         <div className="card-body">
             <h3 className="card-title">{title}</h3>
             <p className="card-text">{text}</p>
         </div>
-    </div>
+    </motion.div>
 }
 
-function DifferenciesCard () {
+function DifferenciesCard() {
 
-    return <CardGroup>
-        {differencies.map(item => {
-            return <Card key={item.id} img={item.img} title={item.title} text={item.text} />
-        })}
-    </CardGroup>
+    return <CascadWrapper
+        className="card-group"
+        items={differencies}
+        Component={Card}
+    >
+    </CascadWrapper>
 }
 
 export default DifferenciesCard;

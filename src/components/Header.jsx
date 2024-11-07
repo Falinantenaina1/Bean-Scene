@@ -1,10 +1,13 @@
+import AnimatedWrapper from "./AnimatedWrapper";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 
-function Header () {
+function Header() {
     return <header className="header" id="header">
-        <Navbar />
-        <Hero />
+        <AnimatedWrapper>
+            <Navbar />
+            <Hero />
+        </AnimatedWrapper>
     </header>
 }
 

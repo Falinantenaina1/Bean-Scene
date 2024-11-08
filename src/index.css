@@ -1,11 +1,8 @@
-*,
-*::after,
-*::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --primary: #603809;
   --secondary: #f9c06a;
@@ -43,9 +40,7 @@ h2 {
 }
 
 .header {
-  background-image: url(./assets/coffee_image.png);
-  background-position: top right;
-  background-size: cover;
+  background: url(./assets/coffee_image.png) top right/cover no-repeat;
 }
 
 .btn {
@@ -144,6 +139,7 @@ h2 {
 .section {
   margin-top: 20px;
   padding: 20px 0;
+  position: relative;
 }
 
 .section-title {
@@ -163,14 +159,18 @@ h2 {
   margin: 2px auto;
 }
 
-#get-chance {
-  background: url(./assets/coffe_with_bean.png);
+#get-chance, #suscribe {
+  background: linear-gradient(
+    var(--primary), var(--border)), 
+    url(./assets/coffe_with_bean.png)
+  ;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--text-light);
 }
 
 #get-chance .section-title,
-#get-chance p {
+#suscribe .section-title {
   color: var(--text-light);
 }
 
@@ -318,6 +318,72 @@ h2 {
   display: none;
 }
 
+#suscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px
+}
+
+.form-group {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+}
+
+.form-group > input {
+  color: var(--text-primary);
+  width: 100%;
+  border: none;
+  padding: 2px 5px;
+}
+
+.form-group > input:focus {
+  outline: none;
+}
+
+.form-group > .btn {
+  border-radius: 0;
+}
+
+.cup-blast {
+  display: none;
+}
+
+#footer {
+  background: var(--primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  padding: 20px 0;
+}
+
+.social {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-title {
+  color: var(--text-light);
+  font-size: 1.3rem;
+}
+
+.contact-info {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-info > a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
 /*LARGE SCREEN */
 @media screen and (min-width: 768px) {
   .container {
@@ -325,14 +391,55 @@ h2 {
   }
 
   .section-with-image {
-    padding: 20px 64px;
-    margin: 24px auto 0;
+    padding: 30px 64px;
+    margin: auto;
   }
 
   .card-group {
     flex-wrap: wrap;
     flex-direction: row;
   }
+
+  .card-group > div {
+    flex: 1 1 40%;
+  }
+
+  .form-group {
+    width: 90%;
+    margin: 24px auto 0;
+  }
+  
+  .form-group > input {
+    width: 100%;
+    border: none;
+    padding: 2px 5px;
+  }
+  
+  .form-group > .btn {
+    border-radius: 0;
+  }
+
+  .cup-blast {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    transform: translateY(25%);
+  }
+
+  .cup-blast.cup-start {
+    left: 0;
+  }
+
+  .cup-blast.cup-end {
+    right: 0;
+  }
+
+  #footer {
+    padding: 50px 0;
+  }
+  
+
 
 }
 
@@ -388,9 +495,8 @@ h2 {
   }
 
   .section {
-    margin-top: 42px;
+    margin-top: 30px;
     padding: 20px 0;
-    position: relative;
   }
 
   .section-title {
@@ -482,9 +588,25 @@ h2 {
     left: 0;
     top: -250px;
   }
+  
+  #suscribe{
+    padding: 60px;
+  }
+
+  #get-chance {
+    padding: 0 60px;
+  }
+
+  .cup-blast {
+    width: 180px;
+  }
 }
 
 @media screen and (min-width: 1128px) {
+
+  .header {
+    height: 100vh;
+  }
 
   .card-group {
     margin-top: 40px;
@@ -506,4 +628,26 @@ h2 {
     object-fit: scale-down;
   }
 
+  #suscribe {
+    padding: 100px;
+  }
+
+  .cup-blast {
+    width: 200px;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 0;
+  }
+
+  .info {
+    max-width: 60%;
+  }
+
+  .info > p {
+    margin: 20px 0;
+  }
 }

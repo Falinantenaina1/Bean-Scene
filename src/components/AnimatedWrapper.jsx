@@ -13,7 +13,7 @@ const AnimatedWrapper = ({children}) => {
             ref={ref}
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
-            transition={{duration: 0.75}}
+            transition={{duration: 1}}
         >
             {children}
         </motion.div>

@@ -1,15 +1,16 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-function CascadWrapper({ className, items, Component }) {
+function CascadWrapper({ className="", items, Component }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true})
 
-    return <div className={className} ref={ref}>
+    return <div className="card-group" ref={ref}>
         {
             items.map((item, index) => {
                 return <motion.div
+                    className={`card ${className}`}
                     key={item.id}
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
